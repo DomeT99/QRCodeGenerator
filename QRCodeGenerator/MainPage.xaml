@@ -1,4 +1,5 @@
-﻿<Page x:Class="QRCodeGenerator.MainPage"
+<Page xmlns:ut="using:Uno.Themes"
+      x:Class="QRCodeGenerator.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:local="using:QRCodeGenerator"
@@ -6,12 +7,44 @@
       Background="{ThemeResource BackgroundBrush}">
   <ScrollViewer>
     <Grid>
-      <StackPanel
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
-        <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
-          Text="Hello Uno Platform!"
-          HorizontalAlignment="Center" />
+      <NavigationView IsPaneOpen="False"
+                      ExpandedModeThresholdWidth="500"
+                      AlwaysShowHeader="False"
+                      IsBackButtonVisible="Collapsed"
+                      HorizontalContentAlignment="Left"
+                      IsSettingsVisible="False">
+      </NavigationView>
+
+      <StackPanel VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
+        <Image Source="splash_screen.scale-300.png"
+               Margin="50"
+               Height="250"
+               Width="250"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"/>
+        <TextBox FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans.ttf"
+                 Width="280"
+                 HorizontalAlignment="Center">
+        </TextBox>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Button Grid.Column="0"
+                  FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans.ttf"
+                  CornerRadius="10"
+                  HorizontalAlignment="Center"
+                  Margin="20"
+                  Content="Generate"></Button>
+          <Button Grid.Column="1"
+                  FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans-Medium.ttf"
+                  CornerRadius="10"
+                  HorizontalAlignment="Center"
+                  Margin="20"
+                  Content="Download"/>
+        </Grid>
       </StackPanel>
     </Grid>
   </ScrollViewer>

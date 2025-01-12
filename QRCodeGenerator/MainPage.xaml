@@ -7,12 +7,18 @@
       Background="{ThemeResource BackgroundBrush}">
   <ScrollViewer>
     <Grid>
-      <NavigationView IsPaneOpen="False"
+      <NavigationView AllowFocusWhenDisabled="True"
+                      VerticalContentAlignment="Stretch"
+                      IsPaneOpen="False"
                       ExpandedModeThresholdWidth="500"
                       AlwaysShowHeader="False"
                       IsBackButtonVisible="Collapsed"
                       HorizontalContentAlignment="Left"
                       IsSettingsVisible="False">
+        <NavigationView.MenuItems>
+          <NavigationViewItem Icon="Home" Content="Home"/>
+          <NavigationViewItem Icon="More" Content="About"/>
+        </NavigationView.MenuItems>
       </NavigationView>
 
       <StackPanel VerticalAlignment="Center"

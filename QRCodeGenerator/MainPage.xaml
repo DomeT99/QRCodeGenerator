@@ -23,10 +23,10 @@
 
       <StackPanel VerticalAlignment="Center"
                   HorizontalAlignment="Center">
-        <Image Source="splash_screen.scale-300.png"
-               Margin="50"
-               Height="250"
-               Width="250"
+                  <TextBlock FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans-Bold.ttf" FontSize="25" TextAlignment="Center" HorizontalAlignment="Center" Text="QRCodeGenerator"/>
+        <Image Margin="50" Source="Assets/Splash/meme.png" 
+               Height="260"
+               Width="260"
                VerticalAlignment="Center"
                HorizontalAlignment="Center"/>
         <TextBox FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans.ttf"

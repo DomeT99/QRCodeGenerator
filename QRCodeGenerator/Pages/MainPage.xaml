@@ -7,24 +7,20 @@
       Background="{ThemeResource BackgroundBrush}">
   <ScrollViewer>
     <Grid>
-      <NavigationView AllowFocusWhenDisabled="True"
-                      VerticalContentAlignment="Stretch"
-                      IsPaneOpen="False"
-                      ExpandedModeThresholdWidth="500"
-                      AlwaysShowHeader="False"
-                      IsBackButtonVisible="Collapsed"
-                      HorizontalContentAlignment="Left"
-                      IsSettingsVisible="False">
-        <NavigationView.MenuItems>
-          <NavigationViewItem Icon="Home" Content="Home"/>
-          <NavigationViewItem Icon="More" Content="About"/>
-        </NavigationView.MenuItems>
-      </NavigationView>
 
+      <TextBlock VerticalAlignment="Top"
+                 TextWrapping="NoWrap"
+                 FontStyle="Oblique"
+                 FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans-Bold.ttf"
+                 Margin="15"
+                 Height="50"
+                 FontSize="35"
+                 TextAlignment="Center"
+                 Text="QRCodeGenerator"/>
       <StackPanel VerticalAlignment="Center"
                   HorizontalAlignment="Center">
-                  <TextBlock FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans-Bold.ttf" FontSize="25" TextAlignment="Center" HorizontalAlignment="Center" Text="QRCodeGenerator"/>
-        <Image Margin="50" Source="Assets/Splash/meme.png" 
+        <Image Margin="50"
+               Source="Assets/Splash/meme.png"
                Height="260"
                Width="260"
                VerticalAlignment="Center"

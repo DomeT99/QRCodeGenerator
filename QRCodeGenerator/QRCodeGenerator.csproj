@@ -23,7 +23,7 @@
     -->
     <UnoFeatures>
       Material;
-      MVUX;
+      Mvvm;
     </UnoFeatures>
   </PropertyGroup>
 

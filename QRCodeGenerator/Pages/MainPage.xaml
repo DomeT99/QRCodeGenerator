@@ -5,6 +5,9 @@
       xmlns:local="using:QRCodeGenerator"
       xmlns:um="using:Uno.Material"
       Background="{ThemeResource BackgroundBrush}">
+  <Page.DataContext>
+    <local:Models.MainViewModel/>
+  </Page.DataContext>
   <ScrollViewer>
     <Grid>
 
@@ -17,17 +20,19 @@
                  FontSize="35"
                  TextAlignment="Center"
                  Text="QRCodeGenerator"/>
+
       <StackPanel VerticalAlignment="Center"
                   HorizontalAlignment="Center">
         <Image Margin="50"
-               Source="Assets/Splash/meme.png"
+               Source="{Binding QrCodeOutput}"
                Height="260"
                Width="260"
                VerticalAlignment="Center"
                HorizontalAlignment="Center"/>
         <TextBox FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans.ttf"
                  Width="280"
-                 HorizontalAlignment="Center">
+                 HorizontalAlignment="Center"
+                 Text="{Binding QrCodeInput, Mode=TwoWay}">
         </TextBox>
         <Grid>
           <Grid.ColumnDefinitions>
@@ -39,7 +44,8 @@
                   CornerRadius="10"
                   HorizontalAlignment="Center"
                   Margin="20"
-                  Content="Generate"></Button>
+                  Content="Generate"
+                  Command="{Binding GenerateQRCodeCommand}"></Button>
           <Button Grid.Column="1"
                   FontFamily="Uno.Fonts.OpenSans/Fonts/OpenSans-Medium.ttf"
                   CornerRadius="10"

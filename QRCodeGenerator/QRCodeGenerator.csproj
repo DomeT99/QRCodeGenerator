@@ -26,5 +26,8 @@
       Mvvm;
     </UnoFeatures>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="IronQR" />
+  </ItemGroup>
 
 </Project>
